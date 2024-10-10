@@ -1,0 +1,309 @@
+:root {
+    --primary-color: #0071e3;
+    --secondary-color: #f5f5f7;
+    --text-color: #1d1d1f;
+    --background-color: #ffffff;
+}
+
+body {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+}
+
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.g-image {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: auto;
+    opacity: 0;
+    transition: top 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.logo-text:hover + .g-image,
+.g-image:hover {
+    top: calc(100% + 10px);
+    opacity: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+main {
+    padding-top: 44px;
+}
+
+.hero {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -.005em;
+    margin-bottom: 0.5em;
+}
+
+.subtitle {
+    font-size: 28px;
+    line-height: 1.10722;
+    font-weight: 400;
+    letter-spacing: .004em;
+    margin-bottom: 1em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 980px;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 1.17648;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0077ED;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-content {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.feature-icon {
+    flex: 0 0 35%;
+    max-width: 35%;
+    font-size: 200px;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.1;
+}
+
+/* Repairs section (left-aligned) */
+#repairs.feature {
+    flex-direction: row;
+}
+
+#repairs .feature-content {
+    text-align: left;
+}
+
+/* Reselling section (left-aligned, inverse to repairs) */
+#reselling.feature {
+    flex-direction: row;
+}
+
+#reselling .feature-content {
+    text-align: left;
+    order: 2;
+}
+
+#reselling .feature-icon {
+    order: 1;
+}
+
+.feature h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list li {
+    justify-content: flex-start;
+}
+
+.feature-list li i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+#contact {
+    background-color: var(--secondary-color);
+    padding: 100px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -.003em;
+    margin-bottom: 1em;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(0, 125, 250, 0.1);
+    outline: none;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 980px;
+    font-size: 17px;
+    line-height: 1.17648;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0077ED;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #f5f5f7;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    color: #86868b;
+}
+
+.hero-icon {
+    font-size: 100px;
+    color: var(--primary-color);
+    opacity: 0.1;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}

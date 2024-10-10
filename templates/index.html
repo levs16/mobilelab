@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobileLab - Ремонт и перепродажа iPhone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="/" class="logo-link">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="MobileLab Лого" class="logo">
+                    <span class="logo-text">MobileLab</span>
+                </a>
+                <img src="{{ url_for('static', filename='images/g.jpeg') }}" alt="G" class="g-image">
+            </div>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#repairs">Ремонт</a></li>
+                <li><a href="#reselling">Перепродажа</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Оживите свой iPhone</h1>
+            <p class="subtitle">Экспертный ремонт и премиальная перепродажа в MobileLab</p>
+            <a href="#repairs" class="cta-button">Узнать о наших услугах</a>
+            <div class="hero-icon">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+        </section>
+
+        <section id="repairs" class="feature">
+            <div class="feature-content">
+                <h2>Ремонт iPhone</h2>
+                <p>Современные технологии встречаются с непревзойденным опытом. Наши сертифицированные техники вдохнут новую жизнь в ваше устройство с точностью и заботой.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-tools"></i> Замена экрана</li>
+                    <li><i class="fas fa-battery-full"></i> Обновление батареи</li>
+                    <li><i class="fas fa-camera"></i> Ремонт камеры</li>
+                    <li><i class="fas fa-tint"></i> Восстановление после попадания воды</li>
+                </ul>
+            </div>
+            <div class="feature-icon">
+                <i class="fas fa-wrench"></i>
+            </div>
+        </section>
+
+        <section id="reselling" class="feature">
+            <div class="feature-icon">
+                <i class="fas fa-sync"></i>
+            </div>
+            <div class="feature-content">
+                <h2>Премиальная перепродажа</h2>
+                <p>Откройте для себя iPhone как новые по непревзойденным ценам. Каждое устройство тщательно восстановлено в соответствии с нашими высокими стандартами.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Тщательные проверки качества</li>
+                    <li><i class="fas fa-shield-alt"></i> 30-дневная гарантия</li>
+                    <li><i class="fas fa-leaf"></i> Экологичный вариант</li>
+                    <li><i class="fas fa-mobile-alt"></i> Доступны последние модели</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Свяжитесь с нами</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить сообщение</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 MobileLab. Все права защищены.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
